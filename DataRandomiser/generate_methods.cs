@@ -27,6 +27,7 @@ namespace DataRandomizer
         private static int[] OGRN_IP = new int[15];
         private static int[] OGRN = new int[13];
         private static int[] KPP = new int[9];
+        private static int[] checking_account_number = new int[20];
         private static int i;
 
         //генерация даты
@@ -271,7 +272,7 @@ namespace DataRandomizer
             return result_OGRN;
         }
 
-        //генерация ОГРН
+        //генерация КПП
         public static string generate_KPP()
         {
             string result_KPP = "";
@@ -281,6 +282,18 @@ namespace DataRandomizer
                 result_KPP += KPP[i];
             }
             return result_KPP;
+        }
+
+        //генерация Нр/с
+        public static string generate_checking_account_number()
+        {
+            string result_checking_account_number = "";
+            for (int i = 0; i < checking_account_number.Length; i++)
+            {
+                checking_account_number[i] = rnd.Next(1, 9);
+                result_checking_account_number += checking_account_number[i];
+            }
+            return result_checking_account_number;
         }
 
         //генерация случайного ASCII символа

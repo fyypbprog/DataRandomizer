@@ -82,6 +82,9 @@ namespace DataRandomiser
                     case "КПП":
                         result_textBox.Text = generate_methods.generate_KPP();
                         break;
+                    case "Нр/с":
+                        result_textBox.Text = generate_methods.generate_checking_account_number();
+                        break;
                     case "Кад. номер":
                         result_textBox.Text = generate_methods.generate_cadastral_number();
                         break;
