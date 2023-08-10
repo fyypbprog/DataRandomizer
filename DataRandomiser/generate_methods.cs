@@ -26,6 +26,7 @@ namespace DataRandomizer
         private static int checksum;
         private static int[] OGRN_IP = new int[15];
         private static int[] OGRN = new int[13];
+        private static int[] KPP = new int[9];
         private static int i;
 
         //генерация даты
@@ -268,6 +269,18 @@ namespace DataRandomizer
                 result_OGRN += OGRN[i];
             }
             return result_OGRN;
+        }
+
+        //генерация ОГРН
+        public static string generate_KPP()
+        {
+            string result_KPP = "";
+            for (int i = 0; i < KPP.Length; i++)
+            {
+                KPP[i] = rnd.Next(1, 9);
+                result_KPP += KPP[i];
+            }
+            return result_KPP;
         }
 
         //генерация случайного ASCII символа

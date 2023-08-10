@@ -79,6 +79,9 @@ namespace DataRandomiser
                     case "ОГРН":
                         result_textBox.Text = generate_methods.generate_OGRN();
                         break;
+                    case "КПП":
+                        result_textBox.Text = generate_methods.generate_KPP();
+                        break;
                     case "Кад. номер":
                         result_textBox.Text = generate_methods.generate_cadastral_number();
                         break;
