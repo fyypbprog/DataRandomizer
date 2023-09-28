@@ -55,6 +55,34 @@ namespace DataRandomizer
             return result_phone;
         }
 
+        //генерация номера телефона (+7 (ХХХ) ХХХ ХХ-ХХ)
+        public static string generate_formatted_phone()
+        {
+            int i = 0;
+            string result_phone = "";
+            result_phone = "+7";
+            foreach (string number in phoneNumber)
+            {
+                i++;
+                switch (i) {
+                    case 1:
+                        result_phone += " (";
+                        break;
+                    case 4:
+                        result_phone += ") ";
+                        break;
+                    case 7:
+                        result_phone += " ";
+                        break;
+                    case 9:
+                        result_phone += "-";
+                        break;
+                }
+                result_phone += rnd.Next(0, 9).ToString();
+            }
+            return result_phone;
+        }
+
         //генерация емейла
         public static string generate_email()
         {

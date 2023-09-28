@@ -55,8 +55,11 @@ namespace DataRandomiser
                     case "Дата":
                         result_textBox.Text = generate_methods.generate_data();
                         break;
-                    case "Номер телефона":
+                    case "Номер телефона (+7ХХХХХХХХХХ)":
                         result_textBox.Text = generate_methods.generate_phone();
+                        break;
+                    case "Номер телефона (+7 (ХХХ) ХХХ ХХ-ХХ)":
+                        result_textBox.Text = generate_methods.generate_formatted_phone();
                         break;
                     case "Email":
                         result_textBox.Text = generate_methods.generate_email();
